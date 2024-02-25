@@ -84,8 +84,8 @@
                       <h6>Portfolio</h6>
                       <h2><em>Raghav K.R</em> About Me</h2>
 		      <div class="white-button">
-                          <a href="#middle">Discover More</a>
-                      </div>
+    		      	<a id="scrollToMiddle">Discover More</a>
+		      </div>
                   </div>
               </div>
           </div>
@@ -432,6 +432,13 @@
 	$("a[href='#top']").click(function() {
         $("html, body").animate({ scrollTop: 0 }, "slow");
         return false;
+    });
+  </script>
+
+  <script>
+    document.getElementById('scrollToMiddle').addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default anchor behavior
+        document.getElementById('middle').scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the middle anchor
     });
   </script>
 
